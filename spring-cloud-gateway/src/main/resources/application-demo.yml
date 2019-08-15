@@ -1,0 +1,15 @@
+
+server:
+  port: 9002
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#      - id: spring-cloud-customer
+#        uri: lb://spring-cloud-customer
+#        predicates:
+#        - Path=/customer/**
+#        filters:
+#        - StripPrefix=2
+
+

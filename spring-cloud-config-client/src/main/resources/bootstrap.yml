@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    config:
+      name: application
+      profile: test
+      label: master
+ #     uri: http://localhost:9008/    #单机版
+
+   #  高可用 注册到eurake
+      discovery:
+        enabled: true
+        serviceId: spring-cloud-config-server
+# 注册中心
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
+

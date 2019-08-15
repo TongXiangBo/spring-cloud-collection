@@ -1,0 +1,28 @@
+server:
+  port: 9008
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/TongXiangBo/spring-cloud-config.git     # ����git�ֿ�ĵ�ַ
+          search-paths: config-repo                             # git�ֿ��ַ�µ���Ե�ַ���������ö������,�ָ
+          username: TongXiangBo                                            # git�ֿ���˺�
+          password: txb921798192gh                                            # git�ֿ������
+  rabbitmq:
+       host: 127.0.0.1
+       port: 5672
+       username: guest
+       password: guest
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
+
+#management:
+#  security:
+#     enabled: false

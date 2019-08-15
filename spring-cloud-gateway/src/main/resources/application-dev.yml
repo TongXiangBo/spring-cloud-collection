@@ -1,0 +1,17 @@
+
+server:
+  port: 9002
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: neo_route
+        uri: http://www.ityouknow.com
+        predicates:
+       # - Path=/spring-cloud
+       # - Before=2018-01-20T06:06:06+08:00[Asia/Shanghai]   #在2018-01-20T06:06:06之前 用 localhost：9002访问时转接到 http://www.ityouknow.com
+        - After=2018-01-20T06:06:06+08:00[Asia/Shanghai]   #在2018-01-20T06:06:06之后 用 localhost：9002访问时转接到 http://www.ityouknow.com
+       # - Between=2018-01-20T06:06:06+08:00[Asia/Shanghai], 2019-01-20T06:06:06+08:00[Asia/Shanghai] #在时间区间内允许访问
+
+
+

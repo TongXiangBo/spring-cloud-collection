@@ -1,0 +1,20 @@
+server:
+  port: 9007
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/TongXiangBo/spring-cloud-config.git     # ����git�ֿ�ĵ�ַ
+          search-paths: config-repo                             # git�ֿ��ַ�µ���Ե�ַ���������ö������,�ָ
+          username: TongXiangBo                                            # git�ֿ���˺�
+          password: txb921798192gh                                            # git�ֿ������
+
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
